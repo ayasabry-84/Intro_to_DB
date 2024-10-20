@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS Customers(
     customer_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215),
-    address VARCHAR(1000)
+    address TEXT 
 );
 
 -- Create Orders Table

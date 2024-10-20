@@ -4,12 +4,14 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="T_#258@ya$npr",
-    database="alx_book_store"  # Specify the database
+    password="T_#258@ya$npr"
 )
 
 # Create a cursor object
 mycursor = mydb.cursor()
+
+# Execute the USE statement to specify the database
+mycursor.execute("USE alx_book_store;")
 
 # Query to list all tables in the specified database
 mycursor.execute("SHOW TABLES;")
@@ -23,4 +25,3 @@ for table in tables:
 # Close the cursor and connection
 mycursor.close()
 mydb.close()
-
